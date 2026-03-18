@@ -1,0 +1,44 @@
+<%- include('layouts/header') %>
+<%- include('layouts/navbar') %>
+
+<header class="masthead" style="background-image: url('/assets/img/about-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1><%= title %></h1>
+                    <span class="subheading">Lựa chọn chân ái cho chiếc bụng đói</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            
+            <% items.forEach(item => { %>
+                <div class="post-preview">
+                    <a href="/detail/<%= item.id %>">
+                        <h2 class="post-title"><%= item.name %></h2>
+                        <h3 class="post-subtitle"><%= item.description %></h3>
+                    </a>
+                    <p class="post-meta">
+                        Giá tham khảo: <strong style="color: #0085A1;"><%= item.price %> VNĐ</strong>
+                        <br><br>
+                        <% if(item.hot){ %>
+                            <span class="badge bg-danger" style="font-size: 14px;">🔥 Đang Cực Hot</span>
+                        <% } else { %>
+                            <span class="badge bg-success" style="font-size: 14px;">👍 Rất Đáng Thử</span>
+                        <% } %>
+                    </p>
+                </div>
+                <hr class="my-4" />
+            <% }) %>
+
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer') %>

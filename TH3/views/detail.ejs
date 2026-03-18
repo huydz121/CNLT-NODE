@@ -1,0 +1,47 @@
+<%- include('layouts/header') %>
+<%- include('layouts/navbar') %>
+
+<header class="masthead" style="background-image: url('<%= item.image %>')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1><%= item.name %></h1>
+                    <h2 class="subheading"><%= item.description %></h2>
+                    <span class="meta">
+                        Mức giá dự kiến: <%= item.price %> VNĐ
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Chào mừng bạn đến với bài đánh giá chi tiết về <strong><%= item.name %></strong>.</p>
+                <p>Nơi đây nổi tiếng với: <em><%= item.description %></em>. Ăn một lần là nhớ mãi!</p>
+                
+                <% if(item.hot) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Lưu ý:</strong> Quán này dạo này đang rần rần trên mạng, bạn nên tranh thủ đi sớm để có chỗ ngồi và không phải xếp hàng chờ lâu nhé!
+                    </div>
+                <% } else { %>
+                    <div class="alert alert-success" role="alert">
+                        <strong>Thông tin:</strong> Tốc độ lên món khá nhanh, không gian thoải mái, rất hợp đi cùng hội bạn thân.
+                    </div>
+                <% } %>
+                
+                <p>Với mức giá <strong><%= item.price %> VNĐ</strong>, đây là một lựa chọn cực kỳ hợp lý.</p>
+                
+                <div class="text-center mt-5">
+                    <a href="/list" class="btn btn-primary text-uppercase">⬅ Quay lại danh sách</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<%- include('layouts/footer') %>
