@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chỉnh sửa bài viết</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chỉnh sửa bài viết</h1>
+        <form action="/blogposts/update/<%= post._id %>" method="POST">
+            <label>Tiêu đề mới:</label>
+            <input type="text" name="title" value="<%= post.title %>" required>
+            <label>Nội dung mới:</label>
+            <textarea name="body" rows="8" required><%= post.body %></textarea>
+            <button type="submit">Cập nhật ngay</button>
+        </form>
+        <br>
+        <a href="/">← Hủy bỏ</a>
+    </div>
+</body>
+</html>

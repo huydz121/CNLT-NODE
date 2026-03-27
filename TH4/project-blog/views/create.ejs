@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tạo bài viết</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tạo bài viết mới</h1>
+        <form action="/blogposts/store" method="POST">
+            <label>Tiêu đề:</label>
+            <input type="text" name="title" placeholder="Nhập tiêu đề bài viết..." required>
+            <label>Nội dung:</label>
+            <textarea name="body" rows="8" placeholder="Viết gì đó thật hay..." required></textarea>
+            <button type="submit">Lưu bài viết ngay</button>
+        </form>
+        <br>
+        <a href="/">← Quay lại trang chủ</a>
+    </div>
+</body>
+</html>

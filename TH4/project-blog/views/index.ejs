@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Cá Nhân</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Danh sách bài viết</h1>
+        <a href="/blogposts/new" style="font-size: 18px;">+ Viết bài mới</a>
+        <ul style="padding: 0; margin-top: 20px;">
+            <% posts.forEach(post => { %>
+                <li class="post-item">
+                    <strong style="font-size: 20px;"><%= post.title %></strong><br>
+                    <p><%= post.body.substring(0, 100) %>...</p>
+                    
+                    <a href="/blogposts/<%= post._id %>">Xem chi tiết</a> | 
+                    
+                    <a href="/blogposts/edit/<%= post._id %>" style="color: orange; font-weight: bold;">Sửa</a> | 
+
+                    <form action="/blogposts/delete/<%= post._id %>" method="POST" style="display:inline;">
+                        <button type="submit" class="btn-delete" onclick="return confirm('Xóa bài này nhé?')">Xóa</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

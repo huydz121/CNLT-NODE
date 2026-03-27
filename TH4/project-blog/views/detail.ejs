@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi tiết bài viết</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= post.title %></h1>
+        <p style="white-space: pre-wrap; line-height: 1.8;"><%= post.body %></p>
+        <hr>
+        <p style="color: #888;">Đăng ngày: <%= post.createdAt.toDateString() %></p>
+        <a href="/">← Quay lại danh sách</a>
+    </div>
+</body>
+</html>
