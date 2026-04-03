@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Cá Nhân | MVC</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Danh sách bài viết</h1>
+        <br><br>
+        <a href="/blogposts/new" class="btn-primary">+ Viết bài mới</a>
+        
+        <div style="margin-top: 30px;">
+            <% if (posts.length === 0) { %>
+                <p style="color: #6b7280; text-align: center; margin-top: 50px;">Chưa có bài viết nào. Hãy tạo bài đầu tiên nhé!</p>
+            <% } else { %>
+                <% posts.forEach(post => { %>
+                    <div class="post-item">
+                        <h2 style="margin-top: 0; color: #1f2937;"><%= post.title %></h2>
+                        <p style="color: #4b5563; line-height: 1.6;"><%= post.body.substring(0, 150) %>...</p>
+                        
+                        <div class="actions" style="margin-top: 15px; border-top: 1px solid #e5e7eb; padding-top: 15px;">
+                            <a href="/blogposts/<%= post._id %>">Xem chi tiết</a>
+                            <a href="/blogposts/edit/<%= post._id %>" style="color: #f59e0b;">Sửa bài</a>
+                            
+                            <form action="/blogposts/delete/<%= post._id %>" method="POST" style="display:inline; float: right;">
+                                <button type="submit" class="btn-delete" onclick="return confirm('Bạn có chắc chắn muốn xóa bài viết này?')">Xóa</button>
+                            </form>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

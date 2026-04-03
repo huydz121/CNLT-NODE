@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Bài Viết Mới</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tạo Bài Viết Mới</h1>
+        <br><br>
+        <form action="/blogposts/store" method="POST">
+            <label style="font-weight: 600; color: #374151;">Tiêu đề bài viết:</label>
+            <input type="text" name="title" placeholder="Nhập tiêu đề thật kêu..." required>
+            
+            <label style="font-weight: 600; color: #374151;">Nội dung bài viết:</label>
+            <textarea name="body" rows="10" placeholder="Chia sẻ suy nghĩ của bạn tại đây..." required></textarea>
+            
+            <button type="submit" style="width: 100%; margin-top: 10px; font-size: 16px;">Đăng Bài Viết</button>
+        </form>
+        
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="/" style="color: #6b7280; text-decoration: none; font-weight: 500;">← Hủy và Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
