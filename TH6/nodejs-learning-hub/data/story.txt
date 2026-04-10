@@ -1,0 +1,1 @@
+Đây là nội dung thử nghiệm Readable Stream. Đang được đọc từ file story.txt

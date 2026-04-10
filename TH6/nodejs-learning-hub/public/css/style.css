@@ -1,0 +1,71 @@
+/* public/css/style.css */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+    color: #333; 
+}
+.navbar { 
+    background-color: #1a252f; 
+    padding: 15px 30px; 
+    display: flex; 
+    gap: 20px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+.navbar a { 
+    color: #ecf0f1; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 16px; 
+    transition: color 0.3s; 
+}
+.navbar a:hover { color: #3498db; }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.header { text-align: center; margin-bottom: 40px; }
+.header h1 { color: #2c3e50; font-size: 32px; }
+
+/* Dành cho Card */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card { 
+    background: #fff; padding: 25px; border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; 
+    border-top: 4px solid #3498db; margin-bottom: 20px;
+    
+    /* THÊM 2 DÒNG NÀY ĐỂ BẬT FLEXBOX CỘT */
+    display: flex;
+    flex-direction: column;
+}
+.card.left-border { text-align: left; border-top: none; border-left: 5px solid #9b59b6; }
+.card h3 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; }
+
+/* Nút bấm chung */
+.btn-link, button { 
+    display: inline-block; padding: 10px 20px; 
+    background-color: #3498db; color: white; text-decoration: none; 
+    border-radius: 5px; transition: 0.3s; border: none; font-size: 16px; cursor: pointer;
+    
+    /* THÊM DÒNG NÀY ĐỂ TỰ ĐỘNG ĐẨY NÚT XUỐNG SÁT ĐÁY */
+    margin-top: auto; 
+}
+.btn-link:hover, button:hover { background-color: #2980b9; }
+
+/* Trang Events */
+.btn-trigger { background-color: #e74c3c; font-weight: bold; padding: 15px 30px; font-size: 18px; }
+.btn-trigger:hover { background-color: #c0392b; transform: scale(1.05); }
+.info-box { background-color: #fdf2e9; padding: 15px; border-radius: 5px; margin-top: 20px; border: 1px solid #fae5d3; color: #d35400; text-align: left;}
+
+/* Trang Request */
+ul.req-list { list-style-type: none; padding: 0; margin: 0; }
+ul.req-list li { background: #f8f9fa; margin-bottom: 10px; padding: 12px; border-radius: 5px; border: 1px solid #e9ecef; }
+ul.req-list li strong { color: #8e44ad; display: inline-block; width: 150px; }
+pre.code-block { background: #2d3436; color: #a29bfe; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: monospace; }
+.alert { background-color: #d1ecf1; color: #0c5460; padding: 15px; border-radius: 5px; border: 1px solid #bee5eb; }
+
+/* Trang Streams */
+.stream-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.badge { display: inline-block; padding: 5px 10px; border-radius: 20px; color: white; font-size: 12px; margin-bottom: 15px;}
+input[type="text"] { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ced4da; border-radius: 5px; box-sizing: border-box; }
+.c-read { border-top-color: #2980b9; } .bg-read, .btn-read { background: #2980b9; } 
+.c-write { border-top-color: #27ae60; } .bg-write, .btn-write { background: #27ae60; }
+.c-trans { border-top-color: #8e44ad; } .bg-trans, .btn-trans { background: #8e44ad; }
+.c-dup { border-top-color: #e67e22; } .bg-dup, .btn-dup { background: #e67e22; }

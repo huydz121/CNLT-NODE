@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng hợp Streams</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">🏠 Trang Chủ</a>
+        <a href="/events">⚡ Events</a>
+        <a href="/request?student=John&id=123">🌐 Request & Header</a>
+        <a href="/streams">🌊 Streams</a>
+    </div>
+    <div class="container" style="max-width: 1000px;">
+        <h1 style="text-align: center;">Hệ Thống Xử Lý Streams</h1>
+        <div class="stream-grid">
+            <div class="card c-read">
+                <h3 style="color: #2980b9;">📖 4.1 Readable Stream</h3>
+                <span class="badge bg-read">fs.createReadStream</span>
+                <p>Đọc nội dung từ file <code>story.txt</code> và truyền (pipe) trực tiếp lên màn hình.</p>
+                <form action="/streams/read" method="GET">
+                    <button type="submit" class="btn-read">Đọc Nội Dung File</button>
+                </form>
+            </div>
+            <div class="card c-write">
+                <h3 style="color: #27ae60;">✍️ 4.2 Writable Stream</h3>
+                <span class="badge bg-write">fs.createWriteStream</span>
+                <p>Nhập văn bản, ghi thẳng vào file <code>output.txt</code> qua Stream.</p>
+                <form action="/streams/write" method="POST">
+                    <input type="text" name="dataContent" placeholder="Nhập text để ghi..." required>
+                    <button type="submit" class="btn-write">Ghi Vào File Tới Server</button>
+                </form>
+            </div>
+            <div class="card c-trans">
+                <h3 style="color: #8e44ad;">🔄 4.3 Transform Stream</h3>
+                <span class="badge bg-trans">Kế thừa Transform</span>
+                <p>Biến đổi chữ thường thành <strong>CHỮ IN HOA</strong> on-the-fly.</p>
+                <form action="/streams/transform" method="POST">
+                    <input type="text" name="transformData" placeholder="Nhập chữ thường..." required>
+                    <button type="submit" class="btn-trans">Biến Đổi (Transform)</button>
+                </form>
+            </div>
+            <div class="card c-dup">
+                <h3 style="color: #e67e22;">🔁 4.4 Duplex Stream</h3>
+                <span class="badge bg-dup">Kế thừa Duplex</span>
+                <p>Vừa nhận dữ liệu (write) vừa phản hồi lại (read) kiểu Echo.</p>
+                <form action="/streams/duplex" method="POST">
+                    <input type="text" name="duplexData" placeholder="Nhập tin nhắn..." required>
+                    <button type="submit" class="btn-dup">Gửi Tin Nhắn (Echo)</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

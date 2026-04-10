@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự Kiện - Events</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">🏠 Trang Chủ</a>
+        <a href="/events">⚡ Events</a>
+        <a href="/request?student=John&id=123">🌐 Request & Header</a>
+        <a href="/streams">🌊 Streams</a>
+    </div>
+    <div class="container" style="max-width: 700px;">
+        <div class="card" style="border-top-color: #e74c3c;">
+            <h1>Minh hoạ EventEmitter</h1>
+            <p>Bấm vào nút dưới đây để kích hoạt một sự kiện trong hệ thống NodeJS.</p>
+            <form action="/event" method="GET">
+                <button type="submit" class="btn-trigger">🚀 Phát Sự Kiện (Trigger Event)</button>
+            </form>
+            <div class="info-box">
+                <strong>💡 Chuyện gì sẽ xảy ra?</strong> Server sẽ lắng nghe sự kiện, tăng biến đếm, ghi lịch sử vào file <code>data/log.txt</code> và gọi callback.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
