@@ -1,0 +1,7 @@
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+  "name": "Nguyen Khac Huy",
+  "email": "huy_moi@gmail.com"
+}
