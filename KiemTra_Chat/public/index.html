@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Sinh Viên Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <div class="logo-icon"><i class="fa-solid fa-comments"></i></div>
+            <h2>Quy Nhon Chat</h2>
+            <p>Kết nối thời gian thực</p>
+            <input type="text" id="username-input" placeholder="Nhập tên của bạn...">
+            <button id="join-btn"><i class="fa-solid fa-right-to-bracket"></i> Vào Phòng</button>
+        </div>
+    </div>
+
+    <div id="chat-screen" class="hidden">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fa-solid fa-users"></i> Đang Online</h3>
+            </div>
+            <ul id="user-list"></ul>
+        </div>
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="user-info">
+                    <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <div>
+                        <h3 id="chat-with">Chọn người để chat...</h3>
+                        <div id="typing-indicator" class="typing-indicator hidden">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages" id="messages">
+                <div class="welcome-text">👋 Chào mừng đến với hệ thống Chat! Vui lòng chọn người bên trái để bắt đầu.</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Nhập tin nhắn..." disabled>
+                <button id="send-btn" disabled><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
