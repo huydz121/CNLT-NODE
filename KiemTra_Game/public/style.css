@@ -1,0 +1,17 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body { background: #1a1a2e; height: 100vh; display: flex; justify-content: center; align-items: center; color: white; }
+
+.hidden { display: none !important; }
+
+#login-screen { position: absolute; width: 100%; height: 100%; background: #0f0c29; display: flex; justify-content: center; align-items: center; z-index: 10; }
+.login-box { background: #16213e; padding: 40px; border-radius: 10px; text-align: center; border: 2px solid #e94560; width: 350px; }
+.login-box h2 { color: #e94560; margin-bottom: 20px; font-size: 30px; }
+.login-box input { width: 100%; padding: 12px; margin-bottom: 20px; border: none; border-radius: 5px; background: #0f3460; color: white; text-align: center; outline: none; font-size: 16px; }
+.login-box button { width: 100%; padding: 12px; background: #e94560; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; }
+.login-box button:hover { background: #ff577f; }
+
+#game-screen { display: flex; width: 1000px; height: 600px; background: #0a0a1a; border: 3px solid #e94560; border-radius: 10px; overflow: hidden; }
+#sidebar { width: 200px; background: #16213e; border-right: 2px solid #e94560; padding: 20px; }
+#sidebar h3 { color: #e94560; font-size: 18px; margin-bottom: 15px; border-bottom: 1px solid #e94560; padding-bottom: 5px; }
+#user-list li { margin-bottom: 10px; font-size: 14px; font-weight: bold; }
+canvas { background: #111; cursor: crosshair; }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quy Nhon Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <h2>🔫 QUY NHON ARENA</h2>
+            <input type="text" id="username-input" placeholder="Nhập tên sát thủ...">
+            <button id="join-btn">VÀO TRẬN</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div id="sidebar">
+            <h3>🔴 ĐANG SỐNG</h3>
+            <ul id="user-list"></ul>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
