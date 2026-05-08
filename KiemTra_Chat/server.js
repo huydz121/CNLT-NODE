@@ -46,6 +46,7 @@ io.on('connection', (socket) => {
         if (receiverSocketId) io.to(receiverSocketId).emit('stop_typing');
     });
 
+    
     // 4. Ngắt kết nối
     socket.on('disconnect', () => {
         if (socket.username) {
